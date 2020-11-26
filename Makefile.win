@@ -4,8 +4,8 @@
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = main.o functions.o
-LINKOBJ  = main.o functions.o
+OBJ      = main.o LogicFunctions.o PrintFunctions.o StartAndEndFunctions.o
+LINKOBJ  = main.o LogicFunctions.o PrintFunctions.o StartAndEndFunctions.o
 LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
@@ -27,5 +27,11 @@ $(BIN): $(OBJ)
 main.o: main.c
 	$(CC) -c main.c -o main.o $(CFLAGS)
 
-functions.o: functions.c
-	$(CC) -c functions.c -o functions.o $(CFLAGS)
+LogicFunctions.o: LogicFunctions.c
+	$(CC) -c LogicFunctions.c -o LogicFunctions.o $(CFLAGS)
+
+PrintFunctions.o: PrintFunctions.c
+	$(CC) -c PrintFunctions.c -o PrintFunctions.o $(CFLAGS)
+
+StartAndEndFunctions.o: StartAndEndFunctions.c
+	$(CC) -c StartAndEndFunctions.c -o StartAndEndFunctions.o $(CFLAGS)
